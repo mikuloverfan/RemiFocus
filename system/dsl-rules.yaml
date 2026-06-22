@@ -1,0 +1,38 @@
+# RemiFocus — 用户自定义 DSL 规则文件
+# 在此文件中添加自定义规则，优先级高于内置规则
+# 格式说明见 plans/three-mode-architecture-design.md §4
+
+version: 1
+
+# ─── 内置规则已预置（见 core/dsl/parser.ts） ───
+# 用户规则示例（取消注释即可启用）：
+
+# ─── 示例 1：自定义词汇规则 ───
+# - rule: my_vocab_rule
+#   description: "自定义：提取带括号的词汇"
+#   match:
+#     - type: regex
+#       pattern: "- \\(.*\\):"
+#   action:
+#     extract:
+#       front: { source: line_content }
+#       meaning: { source: after_colon }
+#   output:
+#     structure: small-vocab
+#     tags: [vocabulary, custom]
+
+# ─── 示例 2：自定义规则卡 ───
+# - rule: my_rule_card
+#   description: "自定义规则卡片"
+#   match:
+#     - type: heading_contains
+#       heading_contains: "重点"
+#   action:
+#     extract:
+#       concept: { source: heading }
+#       details: { source: section, section_name: "解析" }
+#   output:
+#     structure: paragraph
+#     tags: [important]
+
+rules: []

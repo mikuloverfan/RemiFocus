@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "strict": true,
+    "esModuleInterop": true,
+    "outDir": "./dist",
+    "rootDir": ".",
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "types": ["node"]
+  },
+  "include": [
+    "models/**/*",
+    "scheduler/**/*",
+    "modes/**/*",
+    "engine/**/*",
+    "storage/**/*",
+    "resolver/**/*",
+    "ui/**/*",
+    "utils/**/*",
+    "index.ts",
+    "main.ts"
+  ],
+  "exclude": ["node_modules", "dist", "tests"]
+}

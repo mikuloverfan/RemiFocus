@@ -1,0 +1,10 @@
+{
+  "id": "remifocus",
+  "name": "RemiFocus",
+  "version": "0.1.0",
+  "minAppVersion": "1.0.0",
+  "description": "三阶段考研英语单词学习调度系统 — 多卡组解析 + 间隔记忆 + 学习OS界面",
+  "author": "RemiFocus",
+  "authorUrl": "",
+  "isDesktopOnly": false
+}

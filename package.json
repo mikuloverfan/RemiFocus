@@ -1,0 +1,28 @@
+{
+  "name": "remifocus",
+  "version": "0.1.0",
+  "description": "三阶段考研英语单词学习调度系统 — Obsidian 插件",
+  "main": "main.js",
+  "scripts": {
+    "build": "tsc --noEmit && npx esbuild main.ts --bundle --platform=node --external:obsidian --format=cjs --outfile=main.js && node -e \"require('fs').copyFileSync('ui/styles.css','styles.css');console.log('Build OK')\"",
+    "typecheck": "tsc --noEmit",
+    "sync": "node -e \"const fs=require('fs'),path=require('path');const t='D:\\\\obdisian仓库\\\\橘子笔记\\\\.obsidian\\\\plugins\\\\RemiFocus';if(!fs.existsSync(t))fs.mkdirSync(t,{recursive:true});fs.copyFileSync('main.js',path.join(t,'main.js'));fs.copyFileSync('manifest.json',path.join(t,'manifest.json'));fs.copyFileSync('styles.css',path.join(t,'styles.css'));const s=path.join(t,'system');if(!fs.existsSync(s))fs.mkdirSync(s);console.log('=== SYNCED to '+t+' ===');\"",
+    "deploy": "npm run build && npm run sync",
+    "dev": "tsc --noEmit --watch",
+    "test": "jest",
+    "clean": "if exist main.js del main.js & if exist styles.css del styles.css"
+  },
+  "keywords": [
+    "obsidian",
+    "spaced-repetition",
+    "vocabulary",
+    "learning"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "esbuild": "^0.28.1",
+    "obsidian": "^1.13.1",
+    "typescript": "^5.9.3"
+  }
+}
