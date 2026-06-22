@@ -1,9 +1,9 @@
 {
   "id": "remifocus",
   "name": "RemiFocus",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "minAppVersion": "1.0.0",
-  "description": "Learning OS for exam prep: spaced repetition + multi-deck analysis + KU intelligent cards + visual study dashboard inside Obsidian.",
+  "description": "Spaced repetition learning system for exam preparation inside Obsidian, supporting multi-deck study, KU-based card generation, and progress tracking.",
   "author": "RemiFocus",
   "authorUrl": "https://github.com/mikuloverfan/RemiFocus",
   "isDesktopOnly": false
